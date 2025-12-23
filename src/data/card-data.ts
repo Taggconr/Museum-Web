@@ -1,0 +1,42 @@
+import {CardI} from "@/types/card.interface";
+export const CARDS_DATA: CardI[] = [
+    {
+        id: '1',
+        title: 'Доступность в любое',
+        titleDouble: "время и из любой точки мира",
+        classNameTitleOne: "xs:text-[25px] md:text-center md:text-[30px] lg:text-[27px] xl:text-[34px]",
+        classNameTitleTwo: "xs:text-[18px] md:text-center md:text-[20px] lg:text-[20px] xl:text-[24px]",
+        image: "/static/missionCardOne.png",
+        icon: "/static/iconTime.png",
+        subtitle: 'Виртуальный работает 24/7',
+        description: "1) Можно «посетить» экспозицию не выходя из дома;",
+        descriptionDouble: "2) Хватит устройства с интернетом, чтобы изучить экспонаты;",
+    },
+    {
+        id: '2',
+        title: 'Сохранение культурного',
+        titleDouble: "наследия в цифровой форме",
+        classNameTitleOne: "xs:text-[25px] md:text-center md:text-[25px] lg:text-[22px] xl:text-[29px]",
+        classNameTitleTwo: "xs:text-[18px] md:text-center md:text-[23px] lg:text-[20px] xl:text-[24px]",
+        image: "/static/missionCardTwo.png",
+        icon: "/static/iconSave.png",
+        subtitle: 'Виртуальный музей:',
+        description: "\n" +
+            "1) создаёт резервные цифровые копии экспонатов;",
+        descriptionDouble: "2) фиксирует текущее состояние предметов для будущих поколений;",
+        descriptionThreeple: " ",
+    },
+    {
+        id: '3',
+        title: 'Снижение барьеров',
+        titleDouble: "для посещения",
+        classNameTitleOne: "xs:text-[25px] md:text-[20px] lg:text-[25px]",
+        classNameTitleTwo: "xs:text-[18px] xs:pb-0  md:pb-[65px] lg:pb-0 md:text-[26px] lg:text-[33px]",
+        image: "/static/missionCardThree.png",
+        icon: "/static/iconDoor.png",
+        subtitle: 'Нет расходов на:',
+        description: "1) Дорогу и проживание;",
+        descriptionDouble: "2) Входные билеты;",
+        descriptionThreeple: "3) Сопровождение; ",
+    },
+]
