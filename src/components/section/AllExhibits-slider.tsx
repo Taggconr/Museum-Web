@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from "@/components/shared/container";
+import Slider from "@/components/ui/slider";
 
 
 const AllExhibitsSlider = () => {
@@ -11,6 +12,7 @@ const AllExhibitsSlider = () => {
                         <h1 className="text-center font-bold text-[50px] text-[#4A362A]">
                             Более 40 экспонатов!
                         </h1>
+                        <Slider />
                     </div>
                 </div>
             </Container>
