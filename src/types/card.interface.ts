@@ -7,7 +7,7 @@ export interface CardI {
     classNameTitleOne?: string;
     classNameTitleTwo?: string;
     image: string | StaticImport;
-    icon: string | StaticImport
+    icon: string | StaticImport;
     subtitle?: string;
     description?: string;
     descriptionDouble?: string;
