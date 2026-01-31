@@ -11,11 +11,13 @@ export function generateStaticParams() {
 export default async function ExhibitPage({ params }: { params: { id: string } }) {
     const { id } = await params;
     const exhibit = ALL_EXHIBITS_DATA.find((e) => String(e.id) === id);
-    const imageUrl = '/' + exhibit.image;
 
     if (!exhibit) {
         return <div className="p-4 text-red-600">Экспонат не найден</div>;
     }
+    const imageUrl = '/' + exhibit.image;
+
+
 
 
 
