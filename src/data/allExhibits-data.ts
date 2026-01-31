@@ -1,6 +1,6 @@
 import {AllExhibitsI} from "@/types/allExhibits.interface";
 
-export const ALLEXHIBITS_DATA: AllExhibitsI[] = [
+export const ALL_EXHIBITS_DATA: AllExhibitsI[] = [
     {
       id: '1',
       image: 'static/missionCardOne.png'

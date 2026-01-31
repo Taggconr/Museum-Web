@@ -6,11 +6,12 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Navigation } from 'swiper/modules';
-import { ALLEXHIBITS_DATA } from '@/data/allExhibits-data';
+import { ALL_EXHIBITS_DATA } from '@/data/allExhibits-data';
 import Image from 'next/image';
 import {NavigationOptions} from "swiper/types";
 import { FaAngleLeft } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
+import Link from "next/link";
 
 const SwiperComponent = () => {
     const navigationNextRef = useRef<HTMLButtonElement>(null);
@@ -51,15 +52,18 @@ const SwiperComponent = () => {
             loop={true}
             className="mt-[50px] flex flex-col items-center justify-center h-[268px] w-[270px] md:w-[499px] lg:w-[801px] xl:w-[1108px] 2xl:w-[1439px] bg-[#F5E5D3] border-[1px] border-[#BD9E7B] rounded-[20px]"
         >
-            {ALLEXHIBITS_DATA.map((item) => (
+            {ALL_EXHIBITS_DATA.map((item) => (
                 <SwiperSlide key={item.id}>
-                    <Image
-                        src={item.image}
-                        alt="exhibits"
-                        width={197}
-                        height={180}
-                        className="flex items-center justify-center pt-[35px] pb-[53px] w-full h-full"
-                    />
+                    <Link className={"cursor-pointer"} href={`/exhibit/${item.id}`}>
+                        <Image
+                            src={item.image}
+                            alt="exhibits"
+                            width={197}
+                            height={180}
+                            className="flex items-center justify-center pt-[35px] pb-[53px] w-full h-full"
+                        />
+                    </Link>
+
                 </SwiperSlide>
             ))}
             <div className="hidden md:block">
