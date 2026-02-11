@@ -13,7 +13,7 @@ import { FaAngleLeft } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
 import Link from "next/link";
 
-const SwiperComponent = () => {
+const AllExhibitsSwiperComponent = () => {
     const navigationNextRef = useRef<HTMLButtonElement>(null);
     const navigationPrevRef = useRef<HTMLButtonElement>(null);
 
@@ -48,15 +48,13 @@ const SwiperComponent = () => {
                     swiper.navigation.update();
                 }
             }}
-
-            loop={true}
             className="mt-[50px] flex flex-col items-center justify-center h-[268px] w-[270px] md:w-[499px] lg:w-[801px] xl:w-[1108px] 2xl:w-[1439px] bg-[#F5E5D3] border-[1px] border-[#BD9E7B] rounded-[20px]"
         >
             {ALL_EXHIBITS_DATA.map((item) => (
                 <SwiperSlide key={item.id}>
                     <Link className={"cursor-pointer"} href={`/exhibit/${item.id}`}>
                         <Image
-                            src={item.image}
+                            src={item.images[1]}
                             alt="exhibits"
                             width={197}
                             height={180}
@@ -84,4 +82,4 @@ const SwiperComponent = () => {
     );
 };
 
-export default SwiperComponent;
+export default AllExhibitsSwiperComponent;
