@@ -4,9 +4,9 @@ export const ALL_EXHIBITS_DATA: AllExhibitsI[] = [
     {
       id: '1',
       images: [
-          'static/Exhibits/lifestyle/accordion/accordionOne.jpg',
-          'static/Exhibits/lifestyle/accordion/accordionTwo.jpg',
-          'static/Exhibits/lifestyle/accordion/accordionThree.jpg',
+          'static/exhibits/lifestyle/accordion/accordionOne.jpg',
+          'static/exhibits/lifestyle/accordion/accordionTwo.jpg',
+          'static/exhibits/lifestyle/accordion/accordionThree.jpg',
       ],
       title: 'Экспонат 1',
       subtitle: 'FVVVorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati ofum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati of Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati officia quasi sequi tempora veritatis, voluptatem? Aliquam delectus explicabo fugit iste maxime minima nisi non officia perferendis, quo quod saepe tempore vel, velit veniam. Adipisci autem commodi dicta, eveniet facere necessitatibus, nemo quibusdam, repudiandae tempora veniam vitae.',
@@ -14,9 +14,9 @@ export const ALL_EXHIBITS_DATA: AllExhibitsI[] = [
     {
         id: '2',
         images: [
-            'static/Exhibits/lifestyle/bookLenin/bookLeninOne.jpg',
-            'static/Exhibits/lifestyle/bookLenin/bookLeninTwo.jpg',
-            'static/Exhibits/lifestyle/bookLenin/bookLeninThree.jpg',
+            'static/exhibits/lifestyle/bookLenin/bookLeninOne.jpg',
+            'static/exhibits/lifestyle/bookLenin/bookLeninTwo.jpg',
+            'static/exhibits/lifestyle/bookLenin/bookLeninThree.jpg',
         ],
         title: 'Экспонат 2',
         subtitle: 'FVVVorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati ofum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati of Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati officia quasi sequi tempora veritatis, voluptatem? Aliquam delectus explicabo fugit iste maxime minima nisi non officia perferendis, quo quod saepe tempore vel, velit veniam. Adipisci autem commodi dicta, eveniet facere necessitatibus, nemo quibusdam, repudiandae tempora veniam vitae.',
@@ -35,14 +35,14 @@ export const ALL_EXHIBITS_DATA: AllExhibitsI[] = [
     {
         id: '4',
         images: [
-            'static/Exhibits/lifestyle/interior/interiorOne.jpg',
-            'static/Exhibits/lifestyle/interior/interiorTwo.jpg',
-            'static/Exhibits/lifestyle/interior/interiorThree.jpg',
-            'static/Exhibits/lifestyle/interior/interiorFour.jpg',
-            'static/Exhibits/lifestyle/interior/interiorFive.jpg',
-            'static/Exhibits/lifestyle/interior/interiorSix.jpg',
-            'static/Exhibits/lifestyle/interior/interiorSeven.jpg',
-            'static/Exhibits/lifestyle/interior/interiorEght.jpg',
+            'static/exhibits/lifestyle/interior/interiorOne.jpg',
+            'static/exhibits/lifestyle/interior/interiorTwo.jpg',
+            'static/exhibits/lifestyle/interior/interiorThree.jpg',
+            'static/exhibits/lifestyle/interior/interiorFour.jpg',
+            'static/exhibits/lifestyle/interior/interiorFive.jpg',
+            'static/exhibits/lifestyle/interior/interiorSix.jpg',
+            'static/exhibits/lifestyle/interior/interiorSeven.jpg',
+            'static/exhibits/lifestyle/interior/interiorEght.jpg',
 
         ],
         title: 'Экспонат 4',
