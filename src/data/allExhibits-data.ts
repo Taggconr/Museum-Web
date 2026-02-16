@@ -3,6 +3,7 @@ import {AllExhibitsI} from "@/types/allExhibits.interface";
 export const ALL_EXHIBITS_DATA: AllExhibitsI[] = [
     {
       id: '1',
+        categoryId: 'lifestyle',
       images: [
           'static/exhibits/lifeStyle/accordion/accordionOne.jpg',
           'static/exhibits/lifeStyle/accordion/accordionTwo.jpg',
@@ -13,6 +14,7 @@ export const ALL_EXHIBITS_DATA: AllExhibitsI[] = [
     },
     {
         id: '2',
+        categoryId: 'lifestyle',
         images: [
             'static/exhibits/lifeStyle/bookLenin/bookLeninOne.jpg',
             'static/exhibits/lifeStyle/bookLenin/bookLeninTwo.jpg',
@@ -23,6 +25,7 @@ export const ALL_EXHIBITS_DATA: AllExhibitsI[] = [
     },
     {
         id: '3',
+        categoryId: 'svo',
         images: [
             'static/missionCardOne.png',
             'static/missionCardOne.png',
@@ -34,6 +37,7 @@ export const ALL_EXHIBITS_DATA: AllExhibitsI[] = [
     },
     {
         id: '4',
+        categoryId: 'lifestyle',
         images: [
             'static/exhibits/lifeStyle/interior/interiorOne.jpg',
             'static/exhibits/lifeStyle/interior/interiorTwo.jpg',
@@ -50,17 +54,17 @@ export const ALL_EXHIBITS_DATA: AllExhibitsI[] = [
     },
     {
         id: '5',
+        categoryId: 'vov',
         images: [
-            'static/missionCardOne.png',
-            'static/missionCardOne.png',
-            'static/missionCardOne.png',
-            'static/missionCardOne.png',
+            'static/exhibits/vov/cartridges/cartridgesOne.jpg',
+            'static/exhibits/vov/cartridges/cartridgesTwo.jpg',
         ],
         title: 'Экспонат 5',
         subtitle: 'FVVVorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati oforem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati ofum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati of Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis distinctio itaque obcaecati officia quasi sequi tempora veritatis, voluptatem? Aliquam delectus explicabo fugit iste maxime minima nisi non officia perferendis, quo quod saepe tempore vel, velit veniam. Adipisci autem commodi dicta, eveniet facere necessitatibus, nemo quibusdam, repudiandae tempora veniam vitae.',
     },
     {
         id: '6',
+        categoryId: 'svo',
         images: [
             'static/missionCardOne.png',
             'static/missionCardOne.png',
@@ -72,6 +76,7 @@ export const ALL_EXHIBITS_DATA: AllExhibitsI[] = [
     },
     {
         id: '7',
+        categoryId: 'svo',
         images: [
             'static/missionCardOne.png',
             'static/missionCardOne.png',
@@ -83,6 +88,7 @@ export const ALL_EXHIBITS_DATA: AllExhibitsI[] = [
     },
     {
         id: '8',
+        categoryId: 'svo',
         images: [
             'static/missionCardOne.png',
             'static/missionCardOne.png',
@@ -94,6 +100,7 @@ export const ALL_EXHIBITS_DATA: AllExhibitsI[] = [
     },
     {
         id: '9',
+        categoryId: 'svo',
         images: [
             'static/missionCardOne.png',
             'static/missionCardOne.png',
@@ -105,6 +112,7 @@ export const ALL_EXHIBITS_DATA: AllExhibitsI[] = [
     },
     {
         id: '10',
+        categoryId: 'svo',
         images: [
             'static/missionCardOne.png',
             'static/missionCardOne.png',
