@@ -3,6 +3,21 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const BACKEND_URL = process.env.API_URL || 'https://museum-web-backend-m33d.vercel.app';
 
+export async function GET(req: NextRequest, context: { params: Promise<{ path: string[] }> }) {
+    const { path } = await context.params;
+    return proxyRequest(req, path, 'GET');
+}
+
+export async function PUT(req: NextRequest, context: { params: Promise<{ path: string[] }> }) {
+    const { path } = await context.params;
+    return proxyRequest(req, path, 'PUT');
+}
+
+export async function DELETE(req: NextRequest, context: { params: Promise<{ path: string[] }> }) {
+    const { path } = await context.params;
+    return proxyRequest(req, path, 'DELETE');
+}
+
 export async function POST(req: NextRequest, context: { params: Promise<{ path: string[] }> }) {
     const { path } = await context.params;
     return proxyRequest(req, path, 'POST');
