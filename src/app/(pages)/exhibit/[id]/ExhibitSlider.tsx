@@ -4,15 +4,20 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Image from 'next/image';
-import {Navigation} from "swiper/modules";
-import {useRef} from "react";
-import {FaAngleLeft, FaAngleRight} from "react-icons/fa6";
-import {NavigationOptions} from "swiper/types";
-import {StaticImport} from "next/dist/shared/lib/get-img-props";
+import { Navigation } from "swiper/modules";
+import { useRef } from "react";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
+import { NavigationOptions } from "swiper/types";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 interface ExhibitSliderProps {
-    images: string[] | StaticImport[];
+    images: Image[];
     title: string;
+}
+
+interface Image {
+    id: string;
+    image: string;
 }
 
 export default function ExhibitSlider({ images, title }: ExhibitSliderProps) {
@@ -50,7 +55,7 @@ export default function ExhibitSlider({ images, title }: ExhibitSliderProps) {
             {images.map((imageSrc, index) => (
                 <SwiperSlide key={index} className={""}>
                     <Image
-                        src={`/${imageSrc}`}
+                        src={`${imageSrc.image}`}
                         alt={`${title}, изображение ${index + 1}`}
                         width={500}
                         height={500}
@@ -64,13 +69,13 @@ export default function ExhibitSlider({ images, title }: ExhibitSliderProps) {
                     ref={navigationNextRef}
                     className="cursor-pointer absolute right-[5px] top-1/2 -translate-y-1/2 z-10 flex items-center justify-center rounded-full h-[88px] w-[88px] bg-[#BD9E7B]/90 transition-colors duration-200 hover:bg-[#BD9E7B]/80"
                 >
-                    <FaAngleRight size={45}/>
+                    <FaAngleRight size={45} />
                 </button>
                 <button
                     ref={navigationPrevRef}
                     className="cursor-pointer absolute left-[5px] top-1/2 -translate-y-1/2 z-10 flex items-center justify-center rounded-full h-[88px] w-[88px] bg-[#BD9E7B]/90 transition-colors duration-200 hover:bg-[#BD9E7B]/80"
                 >
-                    <FaAngleLeft size={45}/>
+                    <FaAngleLeft size={45} />
                 </button>
             </div>
         </Swiper>

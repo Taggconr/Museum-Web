@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
 
   // Настройка для статического экспорта (размещение как архив/файлы)
-  output: 'export',
+  //output: 'export',
 
   // Отключаем оптимизацию изображений при экспорте (если нужны исходные файлы)
   images: {
