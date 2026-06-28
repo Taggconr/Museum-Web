@@ -1,4 +1,4 @@
-import {ICardExhibits} from "@/types/categoty-cardExhibits.interface";
+import { ICardExhibits } from "@/types/categoty-cardExhibits.interface";
 
 export const DATA_CARD_EXHIBITS: ICardExhibits[] = [
     {

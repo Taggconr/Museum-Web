@@ -1,8 +1,10 @@
+'use client';
 import React from 'react';
 import Container from "@/components/shared/container";
 import AllExhibitsSwiperComponent from "@/components/ui/all-exhibits-swiper-component";
-import {Button} from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
+
 
 
 const AllExhibitsSlider = () => {

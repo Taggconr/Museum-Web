@@ -1,5 +1,5 @@
 'use client';
-import { useRef } from 'react'; // Исправлено: useRef → useRef
+import { useEffect, useRef, useState } from 'react'; // Исправлено: useRef → useRef
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -8,14 +8,55 @@ import 'swiper/css/scrollbar';
 import { Navigation } from 'swiper/modules';
 import { ALL_EXHIBITS_DATA } from '@/data/allExhibits-data';
 import Image from 'next/image';
-import {NavigationOptions} from "swiper/types";
+import { NavigationOptions } from "swiper/types";
 import { FaAngleLeft } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
 import Link from "next/link";
 
+interface Exhibit {
+    id: string;
+    category: string;
+    title: string;
+    subtitle: string;
+    images: Images[];
+}
+
+interface Images {
+    id: string;
+    image: string;
+}
+
+
+
 const AllExhibitsSwiperComponent = () => {
     const navigationNextRef = useRef<HTMLButtonElement>(null);
     const navigationPrevRef = useRef<HTMLButtonElement>(null);
+
+
+    const [exhibits, setExhibits] = useState<Exhibit[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchExhibits = async () => {
+            try {
+                const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/exhibits`, {
+                    credentials: 'include',
+                });
+                if (res.ok) {
+                    const data = await res.json();
+                    setExhibits(data);
+                } else {
+                    console.error('Ошибка загрузки:', res.status);
+                }
+            } catch (err) {
+                console.error('Сетевая ошибка:', err);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchExhibits();
+    }, []);
 
     return (
         <Swiper
@@ -50,11 +91,11 @@ const AllExhibitsSwiperComponent = () => {
             }}
             className="mt-[50px] flex flex-col items-center justify-center h-[268px] w-[270px] md:w-[499px] lg:w-[801px] xl:w-[1108px] 2xl:w-[1439px] bg-[#F5E5D3] border-[1px] border-[#BD9E7B] rounded-[20px]"
         >
-            {ALL_EXHIBITS_DATA.map((item) => (
+            {exhibits.map((item) => (
                 <SwiperSlide key={item.id}>
                     <Link className={"cursor-pointer"} href={`/exhibit/${item.id}`}>
                         <Image
-                            src={item.images[1]}
+                            src={item.images[1].image}
                             alt="exhibits"
                             width={197}
                             height={180}
@@ -69,13 +110,13 @@ const AllExhibitsSwiperComponent = () => {
                     ref={navigationNextRef}
                     className="cursor-pointer absolute right-[5px] top-1/2 -translate-y-1/2 z-10 flex items-center justify-center rounded-full h-[88px] w-[88px] bg-[#BD9E7B]/90 transition-colors duration-200 hover:bg-[#BD9E7B]/80"
                 >
-                    <FaAngleRight size={45}/>
+                    <FaAngleRight size={45} />
                 </button>
                 <button
                     ref={navigationPrevRef}
                     className="cursor-pointer absolute left-[5px] top-1/2 -translate-y-1/2 z-10 flex items-center justify-center rounded-full h-[88px] w-[88px] bg-[#BD9E7B]/90 transition-colors duration-200 hover:bg-[#BD9E7B]/80"
                 >
-                    <FaAngleLeft size={45}/>
+                    <FaAngleLeft size={45} />
                 </button>
             </div>
         </Swiper>
