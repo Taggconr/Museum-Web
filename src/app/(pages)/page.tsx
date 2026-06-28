@@ -9,11 +9,11 @@ export default function Home() {
   return (
     <div className="">
       <main>
-          <Container>
-              <HeroBaner />
-              <GoExhibits />
-              <MissionsCards />
-          </Container>
+        <Container>
+          <HeroBaner />
+          <GoExhibits />
+          <MissionsCards />
+        </Container>
 
       </main>
     </div>
