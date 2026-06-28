@@ -34,8 +34,6 @@ export async function OPTIONS() {
     });
 }
 
-// Аналогично для GET, PUT, DELETE ...
-
 async function proxyRequest(req: NextRequest, path: string[], method: string) {
     const pathStr = path.join('/');
     const url = `${BACKEND_URL}/${pathStr}`;
@@ -48,8 +46,7 @@ async function proxyRequest(req: NextRequest, path: string[], method: string) {
         'Content-Type': 'application/json',
     };
 
-    // Если токен есть и это не запрос на логин (где токена ещё нет), добавляем Authorization
-    // Также для логаута (если он защищён) тоже передаём токен
+    // Если токен есть и это не запрос на логин – добавляем Authorization
     if (token && !pathStr.startsWith('auth/login')) {
         headers['Authorization'] = `Bearer ${token}`;
     }
@@ -59,18 +56,32 @@ async function proxyRequest(req: NextRequest, path: string[], method: string) {
         body = await req.json().catch(() => undefined);
     }
 
+    // --- ЛОГИРОВАНИЕ ---
+    console.log(`[Proxy] ${method} ${url}`);
+    console.log(`[Proxy] token present: ${!!token}`);
+    console.log(`[Proxy] pathStr: ${pathStr}`);
+    console.log(`[Proxy] headers:`, headers);
+    if (body) console.log(`[Proxy] body:`, body);
+    // --------------------
+
     const response = await fetch(url, {
         method,
         headers,
         body: body ? JSON.stringify(body) : undefined,
     });
 
-    const data = await response.json();
+    const data = await response.json().catch(() => ({}));
+
+    // --- ЛОГИРОВАНИЕ ОТВЕТА ---
+    console.log(`[Proxy] response status: ${response.status}`);
+    console.log(`[Proxy] response data:`, data);
+    // -------------------------
 
     const nextRes = NextResponse.json(data, { status: response.status });
 
     // Если это ответ на логин и в теле есть access_token – устанавливаем куку для фронта
     if (pathStr === 'auth/login' && data.access_token) {
+        console.log('[Proxy] Setting cookie for frontend domain');
         nextRes.cookies.set('access_token', data.access_token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
@@ -82,6 +93,7 @@ async function proxyRequest(req: NextRequest, path: string[], method: string) {
 
     // Если это запрос на logout – очищаем куку на фронте
     if (pathStr === 'auth/logout') {
+        console.log('[Proxy] Clearing cookie on logout');
         nextRes.cookies.set('access_token', '', { maxAge: 0, path: '/' });
     }
 
