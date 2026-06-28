@@ -8,6 +8,17 @@ export async function POST(req: NextRequest, context: { params: Promise<{ path: 
     return proxyRequest(req, path, 'POST');
 }
 
+export async function OPTIONS() {
+    return new NextResponse(null, {
+        status: 204,
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+        },
+    });
+}
+
 // Аналогично для GET, PUT, DELETE ...
 
 async function proxyRequest(req: NextRequest, path: string[], method: string) {
